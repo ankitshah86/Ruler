@@ -1,11 +1,15 @@
 #ifndef RULER_H
 #define RULER_H
 
+#include <QDialog>
+#include <QPaintEvent>
 
-class ruler
+class Ruler : public QDialog
 {
 public:
-    ruler();
+    Ruler();
+protected:
+    void paintEvent(QPaintEvent *event);
 };
 
 #endif // RULER_H
