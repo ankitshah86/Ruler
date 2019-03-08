@@ -22,9 +22,15 @@ Ruler::Ruler()
     opacitySlider->setToolTip("Adjust Transperancy");
 
 
+    closeButton = new QToolButton();
+    closeButton->setText("X");
+
+
+
     QVBoxLayout *v = new QVBoxLayout(this);
     v->setAlignment(Qt::AlignHCenter);
     v->addWidget(opacitySlider,Qt::AlignHCenter);
+    v->addWidget(closeButton,Qt::AlignHCenter);
     this->setLayout(v);
 
 
@@ -34,7 +40,8 @@ Ruler::Ruler()
 
 
   connect(opacitySlider,SIGNAL(valueChanged(int)),this,SLOT(resetOpacity(int)));
-   //  setWindowFlags(Qt::FramelessWindowHint);
+  connect(closeButton,SIGNAL(clicked()),this,SLOT(close()));
+  //  setWindowFlags(Qt::FramelessWindowHint);
    /* setAttribute(Qt::WA_NoSystemBackground);
     setAttribute(Qt::WA_TranslucentBackground);
     setAttribute(Qt::WA_TransparentForMouseEvents);

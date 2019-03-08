@@ -17,6 +17,7 @@ public:
     QSlider *opacitySlider;
     bool isMousePressed = false;
     int mousePressX,mousePressY;
+    QToolButton *closeButton;
 
 public slots:
     void resetOpacity(int op);
