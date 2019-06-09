@@ -7,8 +7,8 @@ int main(int argc, char * argv[]){
 
     QApplication app(argc,argv);
 
-    Ruler s;
-    s.show();
+    Controller c;
+    c.show();
 
     return app.exec();
 }
